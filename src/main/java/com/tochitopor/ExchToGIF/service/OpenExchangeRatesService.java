@@ -23,9 +23,9 @@ public class OpenExchangeRatesService {
         BigDecimal currentValue = getCoinValue(apiKey, df.format(calendar.getTime()), coin.toUpperCase());
 
         calendar.add(Calendar.DAY_OF_YEAR,-1);
-        BigDecimal yestrdayValue = getCoinValue(apiKey, df.format(calendar.getTime()), coin.toUpperCase());
+        BigDecimal yesterdayValue = getCoinValue(apiKey, df.format(calendar.getTime()), coin.toUpperCase());
 
-        return currentValue.compareTo(yestrdayValue) >= 0;
+        return currentValue.compareTo(yesterdayValue) >= 0;
     }
 
     private BigDecimal getCoinValue(String apiKey, String date, String coin){

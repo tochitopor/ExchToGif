@@ -12,6 +12,7 @@ import java.util.Map;
 @Service
 @AllArgsConstructor
 public class GiphyService {
+
     private GiphyFeignClient giphyFeignClient;
 
     public String getGiphy(String apiKey, String query, String offset){
