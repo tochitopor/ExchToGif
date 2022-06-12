@@ -31,7 +31,6 @@ public class ExecuteController {
     public String execute(@PathVariable String coin){
         String url;
 
-        boolean b = openExchangeRatesService.isGreater(exchApiKey, coin);
         if(openExchangeRatesService.isGreater(exchApiKey, coin)){
             url = giphyService.getGiphy(giphyApiKey,
                     "rich",

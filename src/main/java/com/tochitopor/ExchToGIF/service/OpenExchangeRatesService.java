@@ -32,8 +32,6 @@ public class OpenExchangeRatesService {
         OpenExchangeRatesDTO DTO = openExchangeRatesFeignClient.getHistorical(apiKey, date);
 
         if(DTO.getRates().containsKey(coin)){
-            String s = DTO.getRates().get(coin);
-            BigDecimal b = new BigDecimal(s);
             return new BigDecimal( DTO.getRates().get(coin));
         }
         else{
